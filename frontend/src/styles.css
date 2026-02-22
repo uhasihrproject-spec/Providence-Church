@@ -1,0 +1,27 @@
+body, html, #root { margin: 0; height: 100%; font-family: Arial, sans-serif; }
+.app {
+  min-height: 100%;
+  color: #fff;
+  padding: 16px;
+  background: linear-gradient(-45deg, #041b36, #342b6f, #116466, #1b334d);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+}
+@keyframes gradientMove { 0% {background-position: 0% 50%;} 50% {background-position: 100% 50%;} 100% {background-position: 0% 50%;}}
+header { display: flex; justify-content: space-between; align-items: center; }
+.watermark { position: fixed; right: 12px; bottom: 12px; opacity: 0.25; font-size: 18px; }
+.chip { padding: 6px 10px; border-radius: 999px; font-size: 12px; }
+.chip.on { background: #2aa65a; }
+.chip.off { background: #8b2f2f; }
+.tabs button, footer button { margin-right: 8px; padding: 8px 12px; border: 0; border-radius: 8px; }
+.verse-panel { margin-top: 24px; font-size: 2rem; text-align: center; }
+.verse-text { min-height: 120px; line-height: 1.4; }
+.word-reveal { opacity: 0; display: inline-block; animation: reveal .4s forwards ease; }
+@keyframes reveal { from { transform: translateY(6px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+footer { margin-top: 22px; display: flex; gap: 8px; }
+footer input { padding: 8px; border-radius: 8px; border: 0; }
+.notes textarea { width: 100%; min-height: 120px; border-radius: 8px; padding: 10px; }
+.notes pre { background: rgba(0,0,0,.35); padding: 10px; border-radius: 8px; white-space: pre-wrap; }
+.screen { padding: 40px; font-size: 24px; }
+.deny { color: #ffaaaa; }
+.mobile .verse-panel { font-size: 1.2rem; }
